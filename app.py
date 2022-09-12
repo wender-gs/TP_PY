@@ -1,5 +1,8 @@
 import pandas as pd
 from selenium import webdriver
+from selenium.webdriver.edge.service import Service
+from selenium.webdriver.edge.options import Options
+from webdriver_manager.microsoft import EdgeChromiumDriverManager
 
 table = pd.read_excel('tp_data.xlsx', sheet_name=0)
 
@@ -9,7 +12,11 @@ v = df['v']
 
 d = 0
 
-driver = webdriver.Edge()
+options = Options()
+options.add_argument("--headless")
+options.add_argument("--no-sandbox")
+
+driver = webdriver.Edge(service=Service(EdgeChromiumDriverManager().install()), options=options)
 
 for i in v:  # variavel i retorna os valores contidos na coluna v
 
