@@ -12,9 +12,9 @@ RUN apt -y update
 
 RUN apt install google-chrome-stable git python3 python3-pip -y
 
-COPY . /app
+RUN git clone https://github.com/wender-gs/TP_PY.git
 
-WORKDIR /app
+WORKDIR /TP_PY
 
 RUN pip install --upgrade pip
 
