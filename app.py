@@ -53,7 +53,7 @@ for i in v:  # variavel i retorna os valores contidos na coluna v
         # clicando no botão de cadastro
         driver.find_element('xpath', '/html/body/section/div[2]/form/button').click()
 
-        with open("dados.txt", 'w') as arquivo:
+        with open("../db/dados.txt", 'w') as arquivo:
             arquivo.write(str(i))
 
         d += 1

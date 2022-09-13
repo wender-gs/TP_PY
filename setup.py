@@ -6,10 +6,10 @@ directory_db = r".\db"
 if not os.path.exists(directory_db):
     print("criando diretorio db")
     os.system("mkdir db")
+    os.system("cd db && call >> dados.txt")
 
 
 def executeapp():
-    os.system("cd db && call >> dados.txt")
     os.system("cd TP_PY && python app.py")
 
 
