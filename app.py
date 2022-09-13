@@ -12,7 +12,7 @@ df = pd.DataFrame(table)
 
 v = df['v']
 
-with open('./db/dados.txt') as file:
+with open('../db/dados.txt') as file:
     try:
         d = int(file.read())
     except Exception as e:
