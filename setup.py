@@ -3,6 +3,7 @@ import os
 directory_app = r".\TP_PY"
 directory_db = r".\db"
 
+
 if not os.path.exists(directory_db):
     print("criando diretorio db")
     os.system("mkdir db")
